@@ -32,32 +32,32 @@ async def _human_time_duration(seconds):
 @Client.on_message(command(["start", f"start@{BOT_USERNAME}"]) & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f"""<b>✨ **ʜᴇʏ {message.from_user.first_name}** \n
-💭 **ɪ'ᴍ [{BOT_NAME}](https://t.me/{BOT_USERNAME}) ᴀʟʟᴏᴡꜱ ᴜ ᴘʟᴀʏ ꜱᴏɴɢꜱ ɪɴ ᴠᴄ ᴄʜᴀᴛꜱ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴢᴀɪᴅ ᴍᴜꜱɪᴄ!
+        f"""<b>✨ **Hey {message.from_user.first_name}** \n
+💭 **ɪ'ᴍ [{BOT_NAME}](https://t.me/{BOT_USERNAME}) Allows you to play songs!
 
-☑️ ꜰɪɴᴅ ᴏᴜᴛ ᴀʟʟ ʙᴏᴛꜱ ᴄᴏᴍᴍᴀɴᴅꜱ ᴀɴᴅ ʜᴇʟᴘꜱ ʙʏ ᴄʟɪᴄᴋɪɴɢ ᴏɴ ɪɴʟɪɴᴇ ʙᴜᴛᴛᴏɴꜱ ᴀɴᴅ /help** [.](https://telegra.ph/file/42fa9676f01c6fd0e15bb.jpg)
+☑️ Find out all bot's  Commands By click on the help Inline button /help** [.](https://telegra.ph/file/42fa9676f01c6fd0e15bb.jpg)
 
 </b>""",
         reply_markup=InlineKeyboardMarkup(
             [ 
                 [
                     InlineKeyboardButton(
-                        " ᴀᴅᴅ ᴍᴇ ᴛᴏ ᴜʀ ᴄʜᴀᴛꜱ ☑️", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
+                        "➕ Add me to group ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
                 ],[
                     InlineKeyboardButton(
-                        " ꜱᴇᴛᴜᴘ⚡", callback_data="cbhowtouse")
+                        " Setup⚡", callback_data="cbhowtouse")
                 ],[
                     InlineKeyboardButton(
-                        "ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ 💫", url="https://github.com/Itsunknown-12/Zaid-Vc-Player")
+                        "⚒️ Bot List ⚒️", url="https://t.me/Bondofbestizz")
                 ],[
                     InlineKeyboardButton(
-                        "⚡ ᴏꜰꜰɪᴄɪᴀʟ ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/SUPERIOR_SUPPORT"
+                        "💡Support", url=f"https://t.me/electroBot_support"
                     ),
                     InlineKeyboardButton(
-                        "ᴏꜰꜰɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ ☑️", url=f"https://t.me/SUPERIOR_BOTS")
+                        "🤖 Updates", url=f"https://t.me/electro_updates")
                 ],[
                     InlineKeyboardButton(
-                        " ℹ️ ʜᴇʟᴘ ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="cbcmds"
+                        " ℹ️ Help and Commands", callback_data="cbcmds"
                     )
                 ]
             ]
@@ -77,10 +77,10 @@ async def start(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "💫 ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/SUPERIOR_SUPPORT"
+                        "💡Support", url=f"https://t.me/Electrobot_SUPPORT"
                     ),
                     InlineKeyboardButton(
-                        "ᴄʜᴀɴɴᴇʟ ☑️", url=f"https://t.me/SUPERIOR_BOTS"
+                        "🤖 Updates", url=f"https://t.me/Electro_updates"
                     )
                 ]
             ]
@@ -94,12 +94,12 @@ async def help(client: Client, message: Message):
 
 **Please press the button below to read the explanation and see the list of available commands powered By Zaid!**
 
-⚡ __Powered by {BOT_NAME} ᴢᴀɪᴅ""",
+⚡ __Powered by {BOT_NAME} electro""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        text="❔ ʜᴏᴡ ᴛᴏ ᴜꜱᴇ ᴍᴇ", callback_data=f"cbguide"
+                        text="❔ How to use me", callback_data=f"cbguide"
                     )
                 ]
             ]
@@ -113,33 +113,33 @@ async def help_(client: Client, message: Message):
 
 **in this menu you can open several available command menus, in each command menu there is also a brief explanation of each command**
 
-⚡ __ᴘᴏᴡᴇʀᴇᴅ ʙʏ {BOT_NAME} ᴢᴀɪᴅ__""",
+⚡ __ᴘᴏᴡᴇʀᴇᴅ ʙʏ {BOT_NAME} Electro__""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "⚡ ʙᴀꜱɪᴄ ᴄᴍᴅꜱ", callback_data="cbbasic"
+                        "⚡ Basic Cmds", callback_data="cbbasic"
                     ),
                     InlineKeyboardButton(
-                        " ᴀᴅᴠᴀɴᴄᴇᴅ ᴄᴍᴅꜱ", callback_data="cbadvanced"
+                        " Advanced Cmds", callback_data="cbadvanced"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        " ᴀᴅᴍɪɴ ᴄᴍᴅꜱ", callback_data="cbadmin"
+                        " Admin Cmds", callback_data="cbadmin"
                     ),
                     InlineKeyboardButton(
-                        " ꜱᴜᴅᴏ ᴄᴍᴅꜱ", callback_data="cbsudo"
+                        " Sudo Cmds", callback_data="cbsudo"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        " ᴏᴡɴᴇʀ ᴄᴍᴅꜱ", callback_data="cbowner"
+                        " Owner Cmds", callback_data="cbowner"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        " ꜰᴜɴ ᴄᴍᴅꜱ", callback_data="cbfun"
+                        " Fun Cmds", callback_data="cbfun"
                     )
                 ]
             ]
@@ -150,11 +150,11 @@ async def help_(client: Client, message: Message):
 @Client.on_message(command(["ping", f"ping@{BOT_USERNAME}"]) & ~filters.edited)
 async def ping_pong(client: Client, message: Message):
     start = time()
-    m_reply = await message.reply_text("ᴢ ᴘɪɴɴɢ...")
+    m_reply = await message.reply_text(" Pinging...")
     delta_ping = time() - start
     await m_reply.edit_text(
-        "𝚣 `ᴘᴏɴɢ!!`\n"
-        f"🇿  `{delta_ping * 1000:.3f} ᴍꜱ`"
+        " `Pong!!`\n"
+        f"op  `{delta_ping * 1000:.3f} ᴍꜱ`"
     )
 
 
@@ -165,7 +165,7 @@ async def get_uptime(client: Client, message: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_text(
-        "🤖 ᴢᴀɪᴅ ꜱᴛᴀᴛᴜꜱ:\n"
-        f"• **ᴜᴘᴛɪᴍᴇ:** `{uptime}`\n"
-        f"• **ꜱᴛᴀʀᴛ ᴛɪᴍᴇ:** `{START_TIME_ISO}`"
+        "🤖 Electro:\n"
+        f"• **Uptime:** `{uptime}`\n"
+        f"• **Start time:** `{START_TIME_ISO}`"
     )
